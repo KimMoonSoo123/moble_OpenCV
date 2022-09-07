@@ -31,6 +31,7 @@ while True:
     retval, frame = cap.read() 
     if not retval:
         break       
+    
 #    plt.imshow(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
     im.set_array(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
     fig.canvas.draw()

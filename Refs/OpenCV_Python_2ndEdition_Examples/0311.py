@@ -15,7 +15,9 @@ def onMouse(event, x, y, flags, param):
         param[0] = np.zeros(param[0].shape, np.uint8) + 255   
     cv2.imshow("img", param[0])
     
-img = np.zeros((512,512,3), np.uint8) + 255
+imageFile = './data/lena.jpg'
+
+img = cv2.imread(imageFile)
 cv2.imshow('img', img)
 cv2.setMouseCallback('img', onMouse, [img])
 cv2.waitKey()
