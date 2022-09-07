@@ -2,8 +2,8 @@
 import cv2
 src = cv2.imread('./data/lena.jpg')
 
-b, g, r = cv2.split(src)
-dst = cv2.merge([b, g, r]) 
+dst = cv2.split(src)
+dst = cv2.merge([dst[0], dst[1], dst[2]]) 
 
 print(type(dst))
 print(dst.shape)

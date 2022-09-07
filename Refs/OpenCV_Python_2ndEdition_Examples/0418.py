@@ -12,6 +12,9 @@ roi = src1[0:rows, 0:cols]
 
 #2
 gray = cv2.cvtColor(src2,cv2.COLOR_BGR2GRAY)
+cv2.imshow('gray',gray)
+
+#픽셀값이 160이상이면 255 / 160이하이면 0으로 치환
 ret, mask = cv2.threshold(gray, 160, 255, cv2.THRESH_BINARY)
 mask_inv = cv2.bitwise_not(mask)
 cv2.imshow('mask',  mask)
